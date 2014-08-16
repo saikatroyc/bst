@@ -12,3 +12,4 @@ void printTreeInorder(pnode);
 int size(pnode );
 int maxDepth(pnode ); 
 int minValue(pnode );
+void printPaths(pnode root); 

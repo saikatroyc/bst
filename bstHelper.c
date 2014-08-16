@@ -53,3 +53,29 @@ int minValue(pnode root) {
    
     return temp->data;
 }
+
+
+void printRecursive(pnode root, int path[], int len) {
+    int i = 0;
+    if (root->left == NULL && root->right == NULL) {
+         // leaf node
+        for (i = 0; i < len; i++) {
+            printf("%d--", path[i]);
+        }
+        printf("%d\n", root->data);
+    } else {
+        path[len++] = root->data;
+        if (root->left) printRecursive(root->left, path, len);
+        if (root->right) printRecursive(root->right, path, len); 
+    }
+}
+
+void printPaths(pnode root) {
+    int path[1000];
+    if (!root) return;
+    printf("paths in the tree\n");
+    printRecursive(root, path, 0);
+}
+
+
+
