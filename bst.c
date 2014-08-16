@@ -15,5 +15,8 @@ int main(){
     printf ("depth = %d\n", maxDepth(head)); 
     printf ("minvalue = %d\n", minValue(head));
     printPaths(head); 
+    printf("%s", hasPathSum(head, 27) ? "true\n" : "false\n"); 
+    printf("%s", hasPathSum(head, 43) ? "true\n" : "false\n"); 
+    printf("%s", hasPathSum(head, 55) ? "true\n" : "false\n"); 
     return 0;
 }

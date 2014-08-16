@@ -77,5 +77,29 @@ void printPaths(pnode root) {
     printRecursive(root, path, 0);
 }
 
+bool checkSumRecursive(pnode root, int sum, int currSum) {
+    if (!root->left && !root->right) {
+        if (currSum + root->data == sum) {
+            return true;
+        } else return false;
+    } else {
+        currSum += root->data;
+        if (root->left
+                && checkSumRecursive(root->left, sum, currSum))
+            return true;
+        else if (root->right
+                 && checkSumRecursive(root->right, sum, currSum))
+            return true;
+        else return false;
+    }
+}
+
+bool hasPathSum(pnode root, int sum) {
+    if (!root) return true;
+    else {
+        int currSum = 0;
+        return checkSumRecursive(root, sum, currSum);
+    }
+}
 
 

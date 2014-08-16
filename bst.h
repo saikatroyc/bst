@@ -1,5 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
+#define bool int
+#define true 1
+#define false 0
 typedef struct a {
 	int data;
 	struct a  *left;
@@ -13,3 +16,4 @@ int size(pnode );
 int maxDepth(pnode ); 
 int minValue(pnode );
 void printPaths(pnode root); 
+bool hasPathSum(pnode , int ); 
