@@ -1,7 +1,7 @@
 #include "bst.h"
 
 pnode createNode(int item);
-
+int invalid = 0xdeadbeef;
 void insert(pnode *root, int item) {
    pnode a  = createNode(item);
    if (*root == NULL) {
@@ -42,4 +42,14 @@ int maxDepth(pnode root) {
         int rdepth = maxDepth(root->right);
         return ((ldepth > rdepth) ? ldepth + 1 : rdepth + 1);
     }
+}
+
+int minValue(pnode root) {
+    if (!root) return invalid;
+    pnode temp = root;
+    while(temp->left != NULL) {
+        temp = temp->left;
+    }
+   
+    return temp->data;
 }

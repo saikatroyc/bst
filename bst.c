@@ -12,6 +12,7 @@ int main(){
     insert(&head, 21); 
     printTreeInorder(head);
     printf("size of tree = %d\n", size(head));
-    printf ("%d\n", maxDepth(head)); 
+    printf ("depth = %d\n", maxDepth(head)); 
+    printf ("minvalue = %d\n", minValue(head)); 
     return 0;
 }

@@ -6,7 +6,9 @@ typedef struct a {
 	struct a  *right;
 } node, *pnode;
 
+
 void insert(pnode *, int);
 void printTreeInorder(pnode); 
 int size(pnode );
 int maxDepth(pnode ); 
+int minValue(pnode );
