@@ -35,3 +35,11 @@ int size(pnode root) {
     else return(size(root->left) + 1 + size(root->right));
 }
 
+int maxDepth(pnode root) {
+    if (!root) return 0;
+    else {
+        int ldepth = maxDepth(root->left);
+        int rdepth = maxDepth(root->right);
+        return ((ldepth > rdepth) ? ldepth + 1 : rdepth + 1);
+    }
+}

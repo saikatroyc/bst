@@ -9,3 +9,4 @@ typedef struct a {
 void insert(pnode *, int);
 void printTreeInorder(pnode); 
 int size(pnode );
+int maxDepth(pnode ); 

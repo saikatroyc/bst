@@ -8,7 +8,10 @@ int main(){
     insert(&head, 6); 
     insert(&head, 20); 
     insert(&head, 13); 
+    insert(&head, 9); 
+    insert(&head, 21); 
     printTreeInorder(head);
-    printf("size of tree = %d\n", size(head)); 
+    printf("size of tree = %d\n", size(head));
+    printf ("%d\n", maxDepth(head)); 
     return 0;
 }
