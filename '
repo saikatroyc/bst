@@ -1,0 +1,15 @@
+#include "bst.h"
+
+void insert(pnode *root, int item) {
+    
+}
+
+void createNode(int item) {
+    pnode a = (int *)malloc(sizeof(int));
+    a->data = item;
+    a->left = NULL;
+   
+
+}
+
+
