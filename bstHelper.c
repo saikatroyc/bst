@@ -102,4 +102,15 @@ bool hasPathSum(pnode root, int sum) {
     }
 }
 
+void mirrorTree(pnode *root) {
+    pnode temp;
+    if (*root == NULL) return;
+    if ((*root)->left == NULL && (*root)->right == NULL) return;
 
+    mirrorTree(&((*root)->left));
+    mirrorTree(&((*root)->right));
+    temp = (*root)->left;
+    (*root)->left = (*root)->right;
+    (*root)->right= temp;
+    return;
+}

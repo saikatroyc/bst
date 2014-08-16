@@ -17,6 +17,12 @@ int main(){
     printPaths(head); 
     printf("%s", hasPathSum(head, 27) ? "true\n" : "false\n"); 
     printf("%s", hasPathSum(head, 43) ? "true\n" : "false\n"); 
-    printf("%s", hasPathSum(head, 55) ? "true\n" : "false\n"); 
+    printf("%s", hasPathSum(head, 55) ? "true\n" : "false\n");
+    printf("mirror tree paths:");
+    mirrorTree(&head); 
+    printPaths(head);
+    printf("restore original tree");
+    mirrorTree(&head); 
+    printPaths(head);
     return 0;
 }
