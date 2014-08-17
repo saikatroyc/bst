@@ -114,3 +114,24 @@ void mirrorTree(pnode *root) {
     (*root)->right= temp;
     return;
 }
+
+void doubleTree(pnode *root) {
+    pnode temp = NULL;
+    if (*root == NULL) return;
+
+    doubleTree(&((*root)->left));
+    doubleTree(&((*root)->right));
+    temp = (*root)->left;
+    (*root)->left = createNode((*root)->data);
+    (*root)->left->left = temp;
+}
+
+bool isSameTree(pnode a, pnode b) {
+    if (a == NULL && b ==NULL) return true;
+    else if (a != NULL && b != NULL) {
+        return ((a->data == b->data)
+                && isSameTree(a->left,b->left)
+                && isSameTree(a->right, b->right));
+
+    } else return false;
+}

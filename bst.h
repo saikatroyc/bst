@@ -18,3 +18,5 @@ int minValue(pnode );
 void printPaths(pnode ); 
 bool hasPathSum(pnode , int ); 
 void mirrorTree(pnode *); 
+void doubleTree(pnode *root); 
+bool isSameTree(pnode , pnode ); 
