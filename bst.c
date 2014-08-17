@@ -43,5 +43,9 @@ int main(){
 
     printf("comapre trees:");
     printf("%s\n", isSameTree(head, head1) ? "true" : "false");
+    printf("%s\n", isBST(head) ? "true" : "false");
+    printf("%s\n", isBST(head1) ? "true" : "false");
+    mirrorTree(&head1); 
+    printf("%s\n", isBST(head1) ? "true" : "false");
     return 0;
 }

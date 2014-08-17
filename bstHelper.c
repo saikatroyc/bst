@@ -135,3 +135,12 @@ bool isSameTree(pnode a, pnode b) {
 
     } else return false;
 }
+
+bool isBST(pnode root) {
+    if (!root) return true;
+    if (root->left && root->data < root->left->data)
+        return false;
+    if (root->right && root->data > root->right->data)
+        return false;
+    return (isBST(root->left) && isBST(root->right));
+}
